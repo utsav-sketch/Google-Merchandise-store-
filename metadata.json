@@ -1,0 +1,6 @@
+{
+  "name": "Google Merchandise Store — Data-Driven Clone",
+  "description": "Responsive ecommerce store and data-driven redesign inspired by the Google Merchandise Store, featuring brand collections, mega navigation, GA4 ecommerce tracking, and research-backed UX enhancements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
