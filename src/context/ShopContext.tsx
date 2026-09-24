@@ -89,7 +89,7 @@ export const ShopProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [currency, setCurrencyState] = useState<Currency>('USD');
   const [appliedPromo, setAppliedPromo] = useState<string | null>(null);
   const [announcementText, setAnnouncementText] = useState<string>(
-    'Free shipping on orders over $60 | Discover the latest Google merchandise'
+    'Free worldwide shipping on orders over $60 | Discover the all-new 750ml Vacuum Insulated Tumbler Collection'
   );
   const [showAnnouncement, setShowAnnouncement] = useState<boolean>(true);
 

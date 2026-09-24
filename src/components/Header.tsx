@@ -32,13 +32,12 @@ export const Header: React.FC = () => {
     showAnnouncement,
     setShowAnnouncement,
     trackGA4Event,
+    setIsSearchOpen,
   } = useShop();
 
   const [isMegaMenuOpen, setIsMegaMenuOpen] = useState<boolean>(false);
   const [activeMegaTab, setActiveMegaTab] = useState<'shop' | 'brands' | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-  const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [navSearchInput, setNavSearchInput] = useState<string>('');
   const [isAccountModalOpen, setIsAccountModalOpen] = useState<boolean>(false);
   const [searchSuggestions] = useState<string[]>([
     'Google T-Shirt',
@@ -50,7 +49,6 @@ export const Header: React.FC = () => {
     'Eco Hoodie',
   ]);
 
-  const searchInputRef = useRef<HTMLInputElement>(null);
   const megaMenuTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnterMega = (tab: 'shop' | 'brands') => {
@@ -64,21 +62,6 @@ export const Header: React.FC = () => {
       setIsMegaMenuOpen(false);
       setActiveMegaTab(null);
     }, 180);
-  };
-
-  useEffect(() => {
-    if (isSearchOpen && searchInputRef.current) {
-      searchInputRef.current.focus();
-    }
-  }, [isSearchOpen]);
-
-  const handleSearchSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (navSearchInput.trim()) {
-      executeSearch(navSearchInput.trim());
-      setIsSearchOpen(false);
-      setNavSearchInput('');
-    }
   };
 
   const handleCategoryClick = (category: Category) => {
@@ -608,54 +591,6 @@ export const Header: React.FC = () => {
         </div>
       )}
 
-      {/* Quick Search Modal / Overlay */}
-      {isSearchOpen && (
-        <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-start justify-center pt-16 px-4 animate-in fade-in duration-150">
-          <div className="bg-white w-full max-w-2xl rounded-2xl shadow-2xl border border-neutral-200 overflow-hidden">
-            <form onSubmit={handleSearchSubmit} className="relative p-4 border-b border-neutral-100 flex items-center">
-              <Search className="w-5 h-5 text-neutral-400 mr-3" />
-              <input
-                ref={searchInputRef}
-                type="text"
-                value={navSearchInput}
-                onChange={(e) => setNavSearchInput(e.target.value)}
-                placeholder="Search products, brands and collections..."
-                className="w-full text-base text-neutral-900 placeholder-neutral-400 focus:outline-none bg-transparent"
-              />
-              <button
-                type="button"
-                onClick={() => setIsSearchOpen(false)}
-                className="text-neutral-400 hover:text-neutral-600 p-1 cursor-pointer"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </form>
-
-            <div className="p-4 bg-neutral-50/50">
-              <span className="text-xs font-semibold text-neutral-400 uppercase tracking-wider block mb-2">
-                Popular Searches
-              </span>
-              <div className="flex flex-wrap gap-2">
-                {searchSuggestions.map((suggestion) => (
-                  <button
-                    key={suggestion}
-                    type="button"
-                    onClick={() => {
-                      executeSearch(suggestion);
-                      setIsSearchOpen(false);
-                      setNavSearchInput('');
-                    }}
-                    className="text-xs bg-white text-neutral-700 px-3 py-1.5 rounded-lg border border-neutral-200 hover:border-neutral-900 hover:text-neutral-900 transition-colors cursor-pointer"
-                  >
-                    {suggestion}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-
       {/* Account Demo Modal */}
       {isAccountModalOpen && (
         <div className="fixed inset-0 bg-black/40 backdrop-blur-xs z-50 flex items-center justify-center p-4">
@@ -706,18 +641,17 @@ export const Header: React.FC = () => {
         <div className="lg:hidden fixed inset-x-0 top-18 bottom-0 bg-white z-40 overflow-y-auto border-t border-neutral-100 p-6 flex flex-col justify-between">
           <div className="space-y-6">
             <div className="relative">
-              <form onSubmit={handleSearchSubmit} className="relative">
-                <input
-                  type="text"
-                  value={navSearchInput}
-                  onChange={(e) => setNavSearchInput(e.target.value)}
-                  placeholder="Search merchandise..."
-                  className="w-full px-4 py-2.5 bg-neutral-100 rounded-xl text-sm text-neutral-900 focus:outline-none pr-10"
-                />
-                <button type="submit" className="absolute right-3 top-2.5 text-neutral-500 cursor-pointer">
-                  <Search className="w-4 h-4" />
-                </button>
-              </form>
+              <button
+                type="button"
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsSearchOpen(true);
+                }}
+                className="w-full px-4 py-2.5 bg-neutral-100 hover:bg-neutral-200 rounded-xl text-sm text-neutral-500 flex items-center justify-between transition-colors cursor-pointer text-left"
+              >
+                <span>Search Google gear, Dino, hoodies...</span>
+                <Search className="w-4 h-4 text-neutral-400" />
+              </button>
             </div>
 
             <div>

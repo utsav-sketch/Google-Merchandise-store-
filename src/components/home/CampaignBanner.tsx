@@ -89,14 +89,15 @@ export const CampaignBanner: React.FC = () => {
             <div className="w-full max-w-sm shrink-0">
               <div className="rounded-2xl overflow-hidden border border-white/15 shadow-2xl relative group">
                 <img
-                  src="https://images.unsplash.com/photo-1544441893-675973e31985?w=700&auto=format&fit=crop&q=80"
-                  alt="Wear the Google Universe Editorial"
+                  src="/tumbler_cobalt_blue.jpg"
+                  alt="Gemini AI Cosmic Spark 750ml Gradient Tumbler"
+                  referrerPolicy="no-referrer"
                   className="w-full h-72 object-cover object-center group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/90 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 text-xs text-neutral-200">
-                  <span className="font-semibold text-white block">Gemini Cosmic Windbreaker</span>
-                  <span className="text-neutral-400">Featured Campaign Keystone</span>
+                  <span className="font-semibold text-white block">Gemini AI Spark 750ml Tumbler</span>
+                  <span className="text-neutral-400">Cobalt Royal Blue · Triple Insulated</span>
                 </div>
               </div>
             </div>

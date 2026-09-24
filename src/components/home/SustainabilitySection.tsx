@@ -73,16 +73,17 @@ export const SustainabilitySection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-3xl overflow-hidden shadow-lg border border-neutral-200">
               <img
-                src="https://images.unsplash.com/photo-1544816155-12df9643f363?w=900&auto=format&fit=crop&q=80"
-                alt="Sustainable Organic Cotton Google Tote"
+                src="/tumbler_sunset_coral.jpg"
+                alt="Sustainable 750ml Reusable Stainless Steel Tumbler"
+                referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 object-cover object-center"
               />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/90 backdrop-blur-md border border-neutral-200/80 text-xs text-neutral-800">
                 <span className="font-bold text-neutral-900 block">
-                  Campus Organic Tote &amp; Recycled Accessories
+                  750ml Reusable Stainless Steel Tumbler Series
                 </span>
                 <span className="text-neutral-500 block text-[11px] mt-0.5">
-                  Zero synthetic pesticides · Fair Trade Certified manufacturing
+                  Eliminates 450+ single-use disposable bottles annually · Zero plastic waste
                 </span>
               </div>
             </div>

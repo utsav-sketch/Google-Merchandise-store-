@@ -21,10 +21,10 @@ export const PopularProducts: React.FC = () => {
               <span>Community Staples</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-neutral-900">
-              Popular on the Merch Shop
+              Popular 750ml Tumblers
             </h2>
             <p className="text-sm text-neutral-500 mt-1">
-              Selected using real GA4 ecommerce velocity: highest repeat purchases and verified customer satisfaction.
+              Top-rated triple-insulated 750ml thermal tumblers selected by verified customer reviews and GA4 purchase velocity.
             </p>
           </div>
 

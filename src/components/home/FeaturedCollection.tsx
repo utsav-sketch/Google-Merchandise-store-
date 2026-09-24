@@ -25,8 +25,9 @@ export const FeaturedCollection: React.FC = () => {
           <div className="lg:col-span-7 relative">
             <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl group">
               <img
-                src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=1000&auto=format&fit=crop&q=80"
-                alt="Chrome Dino Collection Showcase"
+                src="/tumbler_sage_green.jpg"
+                alt="Chrome Dino 750ml Sage Green Insulated Tumbler"
+                referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-[420px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-transparent to-transparent" />
@@ -34,8 +35,8 @@ export const FeaturedCollection: React.FC = () => {
               {/* Floating Pill on image */}
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between text-xs text-neutral-300 bg-neutral-900/85 backdrop-blur-md p-3.5 rounded-xl border border-white/10">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-amber-400 font-bold">GAME OVER?</span>
-                  <span>Not with the 2026 Dino Jacquard series</span>
+                  <span className="font-mono text-amber-400 font-bold">750ML DINO FLASK</span>
+                  <span>Sage Mint · 28 Hours Cold Vacuum Core</span>
                 </div>
                 <span className="text-[11px] font-mono text-neutral-400">PRESS SPACEBAR</span>
               </div>

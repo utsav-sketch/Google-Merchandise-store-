@@ -15,28 +15,28 @@ export const ShopByCategory: React.FC = () => {
 
   const categories: CategoryCardItem[] = [
     {
-      name: 'Apparel',
-      tagline: 'Wear your favourite Google designs.',
-      image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=800&auto=format&fit=crop&q=80',
-      itemCount: '7 Styles',
-    },
-    {
-      name: 'Bags & Accessories',
-      tagline: 'Carry a little Google everywhere.',
-      image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=800&auto=format&fit=crop&q=80',
-      itemCount: '5 Products',
-    },
-    {
       name: 'Lifestyle',
-      tagline: 'Google-inspired everyday essentials.',
-      image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=800&auto=format&fit=crop&q=80',
-      itemCount: '6 Essentials',
+      tagline: '750ml daily hydration for desk and gym.',
+      image: '/tumbler_matte_black.jpg',
+      itemCount: '8 Tumblers',
+    },
+    {
+      name: 'Collections',
+      tagline: 'Chrome Dino, Gemini, and Android special editions.',
+      image: '/tumbler_cobalt_blue.jpg',
+      itemCount: '5 Tumblers',
     },
     {
       name: 'Gifts',
-      tagline: 'Something for every Google fan.',
-      image: 'https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=800&auto=format&fit=crop&q=80',
-      itemCount: '4 Collectibles',
+      tagline: 'Smart OLED, artisan copper, and luxury finishes.',
+      image: '/tumbler_titanium.jpg',
+      itemCount: '4 Tumblers',
+    },
+    {
+      name: 'Bags & Accessories',
+      tagline: 'Trailhead tumblers with carabiner carry caps.',
+      image: '/tumbler_sunset_coral.jpg',
+      itemCount: '3 Tumblers',
     },
   ];
 
@@ -78,6 +78,7 @@ export const ShopByCategory: React.FC = () => {
                 src={cat.image}
                 alt={cat.name}
                 loading="lazy"
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/85 via-neutral-950/30 to-transparent" />

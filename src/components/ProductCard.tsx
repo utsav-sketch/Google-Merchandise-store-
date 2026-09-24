@@ -75,6 +75,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, showDataInsig
           src={primaryImg}
           alt={product.name}
           loading="lazy"
+          referrerPolicy="no-referrer"
           className={`h-full w-full object-cover object-center transition-opacity duration-300 ${
             isHovered ? 'opacity-0 lg:opacity-0' : 'opacity-100'
           }`}
@@ -84,6 +85,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, showDataInsig
           src={hoverImg}
           alt={`${product.name} angle preview`}
           loading="lazy"
+          referrerPolicy="no-referrer"
           className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-300 ${
             isHovered ? 'opacity-100' : 'opacity-0'
           }`}

@@ -48,6 +48,7 @@ export const QuickViewModal: React.FC = () => {
           <img
             src={quickViewProduct.images[0]}
             alt={quickViewProduct.name}
+            referrerPolicy="no-referrer"
             className="w-full h-full object-cover object-center"
           />
         </div>
@@ -82,7 +83,7 @@ export const QuickViewModal: React.FC = () => {
 
             {/* Size Options */}
             <div className="mt-5">
-              <span className="text-xs font-semibold text-neutral-700 block mb-2">Size</span>
+              <span className="text-xs font-semibold text-neutral-700 block mb-2">Capacity &amp; Lid</span>
               <div className="flex flex-wrap gap-2">
                 {quickViewProduct.sizes.map((s) => (
                   <button

@@ -140,6 +140,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
                   <img
                     src={img}
                     alt={`${product.name} thumbnail ${idx + 1}`}
+                    referrerPolicy="no-referrer"
                     className="w-full h-full object-cover object-center"
                   />
                 </button>
@@ -151,6 +152,7 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
               <img
                 src={product.images[selectedImageIndex] || product.images[0]}
                 alt={product.name}
+                referrerPolicy="no-referrer"
                 className="w-full h-full object-cover object-center transition-all duration-300"
               />
 
@@ -260,15 +262,15 @@ export const ProductDetail: React.FC<ProductDetailProps> = ({ product }) => {
               </div>
             )}
 
-            {/* Size Selector */}
+            {/* Size / Lid Selector */}
             <div className="mt-6">
               <div className="flex items-center justify-between text-xs font-medium text-neutral-700 mb-2.5">
-                <span>Select Size: <strong className="text-neutral-900">{selectedSize}</strong></span>
+                <span>Capacity &amp; Lid: <strong className="text-neutral-900">{selectedSize}</strong></span>
                 <button
                   onClick={() => setActiveTab('specs')}
                   className="text-blue-600 hover:text-blue-800 text-xs font-semibold cursor-pointer underline"
                 >
-                  Size Guide &amp; Specs
+                  Tumbler Specs &amp; Dimensions
                 </button>
               </div>
               <div className="flex flex-wrap gap-2">

@@ -37,18 +37,18 @@ export const HeroBanner: React.FC = () => {
         <div className="max-w-2xl text-center lg:text-left">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs text-neutral-200 mb-6 font-medium">
             <Sparkles className="w-3.5 h-3.5 text-blue-400" />
-            <span>2026 Sustainable Merchandise Edition</span>
+            <span>2026 Edition: 750ml Vacuum Tumbler Collection</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
-            Google Gear, <br />
+            750ml Tumblers, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-200 to-emerald-300">
-              Made for Everyday
+              Crafted in Every Shade
             </span>
           </h1>
 
           <p className="mt-6 text-base sm:text-lg text-neutral-300 max-w-xl leading-relaxed">
-            Discover apparel, accessories, and collectibles inspired by the Google universe. Engineered with certified organic textiles, recycled materials, and authentic Silicon Valley craftsmanship.
+            Engineered with 18/8 kitchen-grade triple-insulated stainless steel. Discover 20 unique high-performance 750ml thermal tumblers in vibrant powder coats, smart OLED temperature displays, and leak-proof lids.
           </p>
 
           {/* CTA Buttons */}
@@ -81,21 +81,22 @@ export const HeroBanner: React.FC = () => {
         <div className="relative w-full max-w-lg lg:max-w-md">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-neutral-900 group">
             <img
-              src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=900&auto=format&fit=crop&q=80"
-              alt="Google Gear Apparel Lifestyle"
+              src="/tumbler_matte_black.jpg"
+              alt="Google 750ml Obsidian Matte Black Tumbler"
+              referrerPolicy="no-referrer"
               className="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
             {/* Floating Product Highlight Card */}
             <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-neutral-900/90 backdrop-blur-md border border-white/15 flex items-center justify-between text-left">
               <div>
                 <span className="text-[10px] font-mono text-emerald-400 font-semibold uppercase tracking-wider block">
-                  COMMUNITY FAVORITE
+                  COMMUNITY FAVORITE · 750ML
                 </span>
                 <span className="text-sm font-semibold text-white block">
-                  Google G Heavyweight Tee
+                  Google G-Classic 750ml Tumbler
                 </span>
                 <span className="text-xs text-neutral-400 block mt-0.5">
-                  100% Organic Combed Cotton
+                  Obsidian Black · 24h Cold / 12h Hot
                 </span>
               </div>
               <button

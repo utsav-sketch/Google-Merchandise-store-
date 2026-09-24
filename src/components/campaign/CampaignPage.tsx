@@ -75,13 +75,15 @@ export const CampaignPage: React.FC = () => {
           {/* Lookbook Composition */}
           <div className="grid grid-cols-2 gap-4">
             <img
-              src="https://images.unsplash.com/photo-1544441893-675973e31985?w=600&auto=format&fit=crop&q=80"
-              alt="Lookbook 1"
+              src="/tumbler_cobalt_blue.jpg"
+              alt="Gemini AI 750ml Cobalt Tumbler"
+              referrerPolicy="no-referrer"
               className="w-full h-72 object-cover rounded-2xl shadow-sm"
             />
             <img
-              src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600&auto=format&fit=crop&q=80"
-              alt="Lookbook 2"
+              src="/tumbler_sage_green.jpg"
+              alt="Chrome Dino 750ml Sage Tumbler"
+              referrerPolicy="no-referrer"
               className="w-full h-72 object-cover rounded-2xl shadow-sm mt-8"
             />
           </div>
